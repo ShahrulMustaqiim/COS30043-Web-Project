@@ -28,7 +28,7 @@ export default {
     }
   },
   mounted() {
-    fetch("https://cos-30043-web-project.infinityfreeapp.com/food-api/foods.php")
+    fetch("https://cos30043-web-project-backend-production-e458.up.railway.app/foods.php")
       .then(res => res.json())
       .then(data => {
         this.foods = data;

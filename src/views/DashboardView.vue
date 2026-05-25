@@ -124,7 +124,7 @@ export default {
 
       const user = JSON.parse(raw);
 
-      fetch("https://cos-30043-web-project.infinityfreeapp.com/food-api/get_orders.php?user=" + user.email)
+      fetch("https://cos30043-web-project-backend-production-e458.up.railway.app/get_orders.php?user=" + user.email)
         .then(res => res.json())
         .then(data => {
           this.orderCount = data.length;

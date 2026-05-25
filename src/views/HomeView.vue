@@ -122,7 +122,7 @@ export default {
   mounted() {
     this.user = localStorage.getItem("user");
 
-    fetch("https://cos-30043-web-project.infinityfreeapp.com/food-api/foods.php")
+    fetch("hhttps://cos30043-web-project-backend-production-e458.up.railway.app/foods.php")
       .then(res => res.json())
       .then(data => {
         this.foods = data.slice(0, 6); // show only 6 foods

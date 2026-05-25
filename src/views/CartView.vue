@@ -83,7 +83,7 @@ export default {
 
       try {
 
-        const res = await fetch("https://cos-30043-web-project.infinityfreeapp.com/food-api/orders.php", {
+        const res = await fetch("https://cos30043-web-project-backend-production-e458.up.railway.app/orders.php", {
 
           method: "POST",
 

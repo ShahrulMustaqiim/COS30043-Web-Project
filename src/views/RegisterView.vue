@@ -43,7 +43,7 @@ export default {
             console.log("FUNCTION TRIGGERED");
 
             try {
-                const response = await fetch("https://cos-30043-web-project.infinityfreeapp.com/food-api/register.php", {
+                const response = await fetch("https://cos30043-web-project-backend-production-e458.up.railway.app/register.php", {
                     method: "POST",
                     headers: {
                         "Content-Type": "application/json"
