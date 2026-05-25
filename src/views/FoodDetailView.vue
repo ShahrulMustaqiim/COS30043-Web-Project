@@ -42,7 +42,7 @@ export default {
   mounted() {
     const id = this.$route.params.id;
 
-    fetch("http://localhost:8080/food-api/foods.php")
+    fetch("https://cos-30043-web-project.infinityfreeapp.com/food-api/foods.php")
       .then(res => res.json())
       .then(data => {
         this.food = data.find(f => f.id == id);

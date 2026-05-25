@@ -83,7 +83,7 @@ export default {
 
       try {
 
-        const res = await fetch("http://localhost:8080/food-api/orders.php", {
+        const res = await fetch("https://cos-30043-web-project.infinityfreeapp.com/food-api/orders.php", {
 
           method: "POST",
 

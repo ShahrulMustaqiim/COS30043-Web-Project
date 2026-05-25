@@ -59,7 +59,7 @@ export default {
 
     const user = JSON.parse(raw);
 
-    fetch("http://localhost:8080/food-api/get_orders.php?user=" + user.email)
+    fetch("https://cos-30043-web-project.infinityfreeapp.com/food-api/get_orders.php?user=" + user.email)
       .then(res => res.json())
       .then(data => {
 

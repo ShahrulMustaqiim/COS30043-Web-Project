@@ -35,7 +35,7 @@ export default {
     methods: {
         async handleLogin() {
             try {
-            const res = await fetch("http://localhost:8080/food-api/login.php", {
+            const res = await fetch("https://cos-30043-web-project.infinityfreeapp.com/food-api/login.php", {
                 method: "POST",
                 headers: {
                 "Content-Type": "application/json"
