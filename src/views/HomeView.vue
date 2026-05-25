@@ -131,7 +131,7 @@ export default {
 
   methods: {
     getImage(img) {
-      return new URL(`../assets/${img}`, import.meta.url).href;
+      return `/images/${img}`;
     }
   }
 }
