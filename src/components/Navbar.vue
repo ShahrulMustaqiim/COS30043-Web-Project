@@ -20,7 +20,7 @@
       </div>
 
       <!-- Right side -->
-      <div class="ms-auto d-flex align-items-center">
+      <div class="ms-auto d-flex align-items-center flex-wrap">
 
         <!-- If logged in -->
         <template v-if="user">
@@ -142,6 +142,14 @@ export default {
 
   .ms-auto {
     margin-top: 10px;
+  }
+
+  .navbar-collapse {
+    padding-top: 10px;
+  }
+
+  .nav-link {
+    padding: 8px 0;
   }
 
 }
