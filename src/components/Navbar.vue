@@ -1,5 +1,5 @@
 <template>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-3 fixed-top shadow-sm">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-3 sticky-top shadow-sm">
     
     <!-- Brand -->
     <router-link class="navbar-brand" to="/">MalaysiaFoodHub</router-link>
