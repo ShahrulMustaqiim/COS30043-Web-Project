@@ -1,44 +1,53 @@
 <template>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-3 sticky-top shadow-sm">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-3 fixed-top shadow-sm">
     
     <!-- Brand -->
     <router-link class="navbar-brand" to="/">MalaysiaFoodHub</router-link>
 
-    <!-- Left side -->
-    <div class="navbar-nav">
-      <router-link class="nav-link" to="/">Home</router-link>
-      <router-link class="nav-link" to="/menu">Menu</router-link>
-      <router-link class="nav-link" to="/cart">Cart</router-link>
-    </div>
+    <!-- Mobile Toggle Button -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
-    <!-- Right side -->
-    <div class="ms-auto d-flex align-items-center">
+    <!-- Collapsible Content -->
+    <div class="collapse navbar-collapse" id="navbarContent">
 
-      <!-- If logged in -->
-      <template v-if="user">
-        <router-link class="nav-link text-white" to="/dashboard">Dashboard</router-link>
-        <router-link class="nav-link text-white" to="/orders">Orders</router-link>
+      <!-- Left side -->
+      <div class="navbar-nav">
+        <router-link class="nav-link" to="/">Home</router-link>
+        <router-link class="nav-link" to="/menu">Menu</router-link>
+        <router-link class="nav-link" to="/cart">Cart</router-link>
+      </div>
 
-        <!-- Dark Mode Toggle -->
-        <button class="btn btn-outline-light btn-sm ms-2 me-2" @click="$emit('toggle-dark')">
-          {{ darkMode ? 'Light Mode' : 'Dark Mode' }}
-        </button>
+      <!-- Right side -->
+      <div class="ms-auto d-flex align-items-center">
 
-        <button class="btn btn-outline-light btn-sm ms-2" aria-label="Logout from account" @click="logout">
-          Logout
-        </button>
-      </template>
+        <!-- If logged in -->
+        <template v-if="user">
+          <router-link class="nav-link text-white" to="/dashboard">Dashboard</router-link>
+          <router-link class="nav-link text-white" to="/orders">Orders</router-link>
 
-      <!-- If NOT logged in -->
-      <template v-else>
-        <router-link class="nav-link text-white" to="/login">Login</router-link>
-        <router-link class="nav-link text-white" to="/register">Register</router-link>
+          <!-- Dark Mode Toggle -->
+          <button class="btn btn-outline-light btn-sm ms-2 me-2" @click="$emit('toggle-dark')">
+            {{ darkMode ? 'Light Mode' : 'Dark Mode' }}
+          </button>
 
-        <!-- Dark Mode Toggle -->
-        <button class="btn btn-outline-light btn-sm ms-2 me-2" @click="$emit('toggle-dark')">
-          {{ darkMode ? 'Light Mode' : 'Dark Mode' }}
-        </button>
-      </template>
+          <button class="btn btn-outline-light btn-sm ms-2" aria-label="Logout from account" @click="logout">
+            Logout
+          </button>
+        </template>
+
+        <!-- If NOT logged in -->
+        <template v-else>
+          <router-link class="nav-link text-white" to="/login">Login</router-link>
+          <router-link class="nav-link text-white" to="/register">Register</router-link>
+
+          <!-- Dark Mode Toggle -->
+          <button class="btn btn-outline-light btn-sm ms-2 me-2" @click="$emit('toggle-dark')">
+            {{ darkMode ? 'Light Mode' : 'Dark Mode' }}
+          </button>
+        </template>
+      </div>
     </div>
   </nav>
 </template>
@@ -119,5 +128,21 @@ export default {
 .navbar {
   backdrop-filter: blur(10px);
   z-index: 1000;
+}
+
+.navbar-nav .nav-link {
+  margin-right: 10px;
+}
+
+@media (max-width: 992px) {
+
+  .navbar-nav {
+    margin-top: 10px;
+  }
+
+  .ms-auto {
+    margin-top: 10px;
+  }
+
 }
 </style>
